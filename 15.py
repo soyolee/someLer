@@ -2,7 +2,7 @@ from itertools import groupby
 lines = '''
 This is the
 first paragraph.
-
+#
 This is the second.
 '''.splitlines()
 # Use itertools.groupby and bool to return groups of
