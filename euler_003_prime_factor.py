@@ -28,10 +28,16 @@ if __name__ == "__main__":
         if isPrime(i) == True:
             #print i
             prime.append(i)
-
+			
 print prime
 
-    # step three : div 
+    # step three : div input001 from prime
+	
+for j in prime:
+	if (input001 % j) == 0:
+		print j
+	
+	
 
 
 #print(sum(i for i in range(10) if isPrime(i) == True ))
