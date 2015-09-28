@@ -12,3 +12,5 @@ class prime:
 				return False 
 			i = i + 1
 		return True 
+        
+        
