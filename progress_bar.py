@@ -28,3 +28,4 @@ for i in xrange(toolbar_width):
     sys.stdout.flush()
 
 sys.stdout.write("\n")
+
