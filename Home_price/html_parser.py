@@ -22,7 +22,7 @@ list = (
    "http://www.zillow.com/foster-city-ca/home-values/"
    "http://www.zillow.com/san-mateo-ca/home-values/",
    "http://www.zillow.com/south-san-francisco-ca/home-values/",
-   "http://www.zillow.com/san-francisco-ca/home-values/"
+   "http://www.zillow.com/san-francisco-ca/home-values/",
    "http://www.zillow.com/milpitas-ca/home-values/",
    "http://www.zillow.com/fremont-ca/home-values/",
    "http://www.zillow.com/newark-ca/home-values/",
@@ -31,6 +31,8 @@ list = (
    "http://www.zillow.com/pleasanton-ca/home-values/",
    "http://www.zillow.com/dublin-ca/home-values/",
    "http://www.zillow.com/san-ramon-ca/home-values/",
+   "http://www.zillow.com/reno-nv/home-values/"
+   
 )
 print "******************"
 print zillow_say
