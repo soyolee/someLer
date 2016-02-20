@@ -30,6 +30,7 @@ list = (
    "http://www.zillow.com/hayward-ca/home-values/",
    "http://www.zillow.com/pleasanton-ca/home-values/",
    "http://www.zillow.com/dublin-ca/home-values/",
+   "http://www.zillow.com/livermore-ca/home-values/"
    "http://www.zillow.com/san-ramon-ca/home-values/",
    "http://www.zillow.com/reno-nv/home-values/"
    
