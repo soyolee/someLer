@@ -32,7 +32,7 @@ def div(stock_symbol):
     
 def symbols(stock_symbol):
     today = date.today()
-    start = (today.year - year_to_cal, today.month, today.day)
+    start = (today.year , today.month, today.day - 1)   # Here we have a bug. If report running on weekend, you will get error because we only minus one day which possible is NOT value market date.
     quotes = quotes_historical_yahoo_ochl(stock_symbol, start, today)
     df = pd.DataFrame(quotes)
     df.columns = [u'Date', u'Open',u'Close',u'High',u'Low',u'Volume']
@@ -50,6 +50,8 @@ def symbols(stock_symbol):
     
     return (sum/df.shape[0])
 
+
+	
 def myprint(color,mes):
     if color == 'r':
         fore = 31
@@ -69,6 +71,8 @@ if __name__ == '__main__' :
     wonderland = ['FTNT',
                   'CTL',
                   'NLY',
+				  'AGNC',
+				  'ARR',
                   'LVS',
                   'C',
                   'T',
@@ -84,27 +88,17 @@ if __name__ == '__main__' :
                   'TGT',
                   'WMT',
                   'VLKPY', 
-                  'LEDS',  
-                  'ASUUY', 
-                  'MELY',  
-                  'HIMX',  
-                  'SIMO',  
                   'CHT' ,  
-                  'AUO'	,
-                  'HNHPF', 
-                  'FUIZF', 
-                  'APWC'	,
-                  'IMOS'	,     
                   'GRMN'	,
                   'ASX'	,
                   'UMC'	,
                   'SPIL'	,
                   'GIGM'	,
                   'TSM'	,
-                  'ISSI'
+                  'HSBC'
                   ]
     print "\nThis report generate on %s-%s-%s" %(date.year,date.month,date.day)                  
-    print "-----------------------"
+    print "----------------------------------------------"
     for i in wonderland:
         if symbols(i) > div(i)*30   :
             price = myprint("r","%.2f" %symbols(i))
@@ -116,11 +110,11 @@ if __name__ == '__main__' :
             price = myprint("g","%.2f" %symbols(i))
             
         #print "***********************"
-        print "%s\t : \t%s\tdiv %.2f\tsuggest buying price %.2f"  %(i,price,div(i),div(i)*15*0.85)
+        print "%s\t : \t%s\t\tdiv %.2f\tsuggest buying price %.2f"  %(i,price,div(i),div(i)*15*0.85)
         #print "%s\t : \t%.2f" %(i,float(price))
         #print i +"\t : ",
         #print "div\t%.2f"  %(div(i))
         #print "***********************"
-    print "-----------------------"
+    print "----------------------------------------------"
     
     
