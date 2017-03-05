@@ -12,6 +12,7 @@ zillow_say = "This report generate on %s-%s-%s \n\nHow often are Zestimates for 
 
 list = (
    "http://www.zillow.com/san-jose-ca/home-values/",
+   "http://www.zillow.com/north-san-jose-san-jose-ca/home-values/",
    "http://www.zillow.com/santa-clara-ca/home-values/",
    "http://www.zillow.com/sunnyvale-ca/home-values/",
    "http://www.zillow.com/cupertino-ca/home-values/",
@@ -19,7 +20,8 @@ list = (
    "http://www.zillow.com/los-altos-ca/home-values/",
    "http://www.zillow.com/palo-alto-ca/home-values/",
    "http://www.zillow.com/menlo-park-ca/home-values/",
-   "http://www.zillow.com/foster-city-ca/home-values/"
+   "http://www.zillow.com/foster-city-ca/home-values/",
+   "http://www.zillow.com/redwood-city-ca/home-values/",
    "http://www.zillow.com/san-mateo-ca/home-values/",
    "http://www.zillow.com/south-san-francisco-ca/home-values/",
    "http://www.zillow.com/san-francisco-ca/home-values/",
@@ -29,10 +31,12 @@ list = (
    "http://www.zillow.com/union-city-ca/home-values/",
    "http://www.zillow.com/hayward-ca/home-values/",
    "http://www.zillow.com/pleasanton-ca/home-values/",
+   "http://www.zillow.com/san-ramon-ca/home-values/",
    "http://www.zillow.com/dublin-ca/home-values/",
    "http://www.zillow.com/livermore-ca/home-values/"
    "http://www.zillow.com/san-ramon-ca/home-values/",
-   "http://www.zillow.com/reno-nv/home-values/"
+   "http://www.zillow.com/reno-nv/home-values/",
+   "https://www.zillow.com/campbell-ca/home-values/"
    
 )
 print "******************"
@@ -57,3 +61,4 @@ for pointer in list:
             price = price.translate(None, " ")
             #print " %s\t\t\t\t %s\t$ %s" %(city,j[j.index("is")],price)
             print '{0:30s} is\t $ {1}'.format(city, price)
+	    break
